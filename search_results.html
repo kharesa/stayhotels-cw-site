@@ -1,47 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        body{
-            background-color: rgb(233, 231, 231);
-        }
-        .breadcrumbs{
-            padding: 0px;
+<style>
+    body {
+        background-color: rgb(233, 231, 231);
+    }
 
-        }
-        .breadcrumbs__item{
-            display: inline-block;
-        }
-        .breadcrumbs__item:not(:last-of-type)::after{
-            content: ">";
-            margin: 0 5px;
+    .breadcrumbs {
+        padding: 0px;
 
-        }
-        .breadcrumbs__link--active{
-            text-decoration: none;
-            color: black;
-        }
-    </style>
-    <title>STAY HOTELS | Search Results</title>
-    <head>
+    }
 
-    </head>
-    <body>
-        <div class="Top of the Page">
-            <ul class="breadcrumbs">
-                <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
-                <li class="breadcrumbs__item">
-                    <a href="" class="breadcrumbs__link">Homepage</a>
-                </li>
+    .breadcrumbs__item {
+        display: inline-block;
+    }
 
-                <li class="breadcrumbs__item">
-                    <a href="" class="breadcrumbs__link--active">Search Results</a>
+    .breadcrumbs__item:not(:last-of-type)::after {
+        content: ">";
+        margin: 0 5px;
 
-                </li>
+    }
+
+    .breadcrumbs__link--active {
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidenav {
+        height: 75%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 5;
+        left: 10;
+        overflow-x: hidden;
+        padding-top: 10px;
+        border: 2px solid black;
+    }
+
+    .sidenav a {
+        padding: 5px 5px 3px 12px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        color: #020202;
+        display: block;
+    }
+    
+
+</style>
+<title>STAY HOTELS | Search Results</title>
+
+<head>
+    <script src="https://kit.fontawesome.com/7775ddf689.js"></script>
+
+</head>
+
+<body>
+    <div class="Top of the Page">
+        <ul class="breadcrumbs">
+            <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
+            <li class="breadcrumbs__item">
+                <a href="" class="breadcrumbs__link">Homepage</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+                <a href="" class="breadcrumbs__link--active">Search Results</a>
+
+            </li>
 
 
-            </ul>
-            <img src="images/logo.png" alt="STAY HOTELS LOGO" width="50px" border="0">
+        </ul>
+
+
+        <img src="images/logo.png" alt="STAY HOTELS LOGO" width="50px" border="0">
+
+        <div class="sidenav">
+            <a href="#Filter">Filter Hotel by:</a>
+            <a href="#Style"><i class="fas fa-star-half-alt fa-fw"></i>  Rating</a>
+            <a href="#Floors"><i class="fas fa-home fa-fw"></i>  Style </a>
+            <a href="#floors"><i class="fas fa-building fa-fw"></i>Floors</a>
+            <a href="#wifi"><i class="fas fa-wifi fa-fw"></i>Wifi</a>
+            <a href="#checkintime"><i class="far fa-calendar fa-fw"></i>Check in time</a>
+            <a href="#checkouttime"><i class="far fa-calendar-times fa-fw"></i>Check out time</a>
+            <a href="#petsallowed"><i class="fas fa-dog fa-fw"></i>Pets Allowed</a>
+            <a href="#Roomservice"><i class="fas fa-utensils fa-fw"></i>Room Service</a>
+            <br>
+
+            <a href="#contact">Filter Facilities By:</a>
+
+            <div class="RoomType">
+                <a href="#pool"><i class="fas fa-tint fa-fw"></i>Pool</a>
+                <a href="#office"><i class="fas fa-desktop fa-fw"></i>Office</a>
+                <a href="#spa"><i class="fas fa-spa fa-fw"></i>Spa</a>
+                <a href="#conference room"><i class="fab fa-confluence fa-fw"></i>Conference Rooms</a>
+            </div>
+            <br>
+            <a href="#filterby"><i class="fas fa-globe-asia fa-fw"></i>Filter Location By:</a>
+            <div class="Location">
+                <a href="#0miles">0 miles</a>
+                <a href="#5miles">5 miles</a>
+                <a href="#10miles">10 miles</a>
+                <a href="#20miles">under 20 miles</a>
+                <a href="#any">Any</a>
+            </div>
+
+            <div class="LocationFilters">
+                <br> 
+                <a href="#clearallfilters"><i class="fas fa-backspace fa-fw"></i>Clear all filters</a>
+            </div>
+
+
+
+
         </div>
-    </body>
+    </div>
+</body>
 
 </html>

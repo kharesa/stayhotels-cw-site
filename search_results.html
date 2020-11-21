@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color: rgb(233, 231, 231);
+        }
+        .breadcrumbs{
+            padding: 0px;
+
+        }
+        .breadcrumbs__item{
+            display: inline-block;
+        }
+        .breadcrumbs__item:not(:last-of-type)::after{
+            content: ">";
+            margin: 0 5px;
+
+        }
+        .breadcrumbs__link--active{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <title>STAY HOTELS | Search Results</title>
+    <head>
+
+    </head>
+    <body>
+        <div class="Top of the Page">
+            <ul class="breadcrumbs">
+                <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
+                <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link">Homepage</a>
+                </li>
+
+                <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link--active">Search Results</a>
+
+                </li>
+
+
+            </ul>
+            <img src="images/logo.png" alt="STAY HOTELS LOGO" width="50px" border="0">
+        </div>
+    </body>
+
+</html>

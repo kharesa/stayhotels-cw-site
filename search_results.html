@@ -1,119 +1,12 @@
 <!DOCTYPE html>
 <html>
 <style>
-    body {
-        background-color: rgb(233, 231, 231);
-    }
-
-    .breadcrumbs {
-        padding: 0px;
-
-    }
-
-    .breadcrumbs__item {
-        display: inline-block;
-    }
-
-    .breadcrumbs__item:not(:last-of-type)::after {
-        content: ">";
-        margin: 0 5px;
-
-    }
-
-    .breadcrumbs__link--active {
-        text-decoration: none;
-        color: black;
-    }
-
-    .sidenav {
-        height: 75%;
-        width: 250px;
-        position: fixed;
-        z-index: 1;
-        top: 5;
-        left: 10;
-        overflow-x: hidden;
-        padding-top: 10px;
-        border: 2px solid black;
-    }
-
-    .sidenav a {
-        padding: 5px 5px 3px 12px;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: bold;
-        color: #020202;
-        display: block;
-    }
-
-    #logo{
-	position:absolute;
-	top:40px ;
-	left:10;
-}
-div.hotel-name1 {
-position : fixed ;
-  width: 500px;
-  height: 30px;
-  border: 3px solid #000000;
-  background-color: rgb(69, 130, 211);
-}
-
-div.hotel-view1 {
-  position : fixed ;
-  top: 33px;
-  width: 500px;
-  height: 300px;
-  border: 3px solid #000000;
-}
-
-.all-view {
-    position: fixed;
-    width: 40% ;
-    top: 20% ;
-    left: 50% ;
-    transform: translate(-50%, -50%);
-}
-
-div.hotel-name2 {
-  position : fixed ;
-  top: 336px;
-  width: 500px;
-  height: 30px;
-  border: 3px solid #000000;
-}
-div.hotel-name3 {
-  position : fixed ;
-  top: 369px;
-  width: 500px;
-  height: 30px;
-  border: 3px solid #000000;
-}
-div.hotel-name4 {
-  position : fixed ;
-  top: 402px;
-  width: 500px;
-  height: 30px;
-  border: 3px solid #000000;
-}
-
-div.hotel-name5 {
-  position : fixed ;
-  top: 435px;
-  width: 500px;
-  height: 30px;
-  border: 3px solid #000000;
-}
-
-
-
-
 </style>
 <title>STAY HOTELS | Search Results</title>
 
 <head>
     <script src="https://kit.fontawesome.com/7775ddf689.js"></script>
-
+    <link rel="stylesheet" href="css/mystyle.css">
 </head>
 
 <body>
@@ -136,7 +29,8 @@ div.hotel-name5 {
 
         <div id="logo">
             <img src="images/logo.png" alt="STAY HOTELS LOGO" width="50px">
-        </div> <!--the logo-->
+        </div>
+        <!--the logo-->
 
         <!--the results border-->
         <ul>
@@ -146,17 +40,35 @@ div.hotel-name5 {
         <div class="all-view">
 
             <div class="hotel-name1">Picadilly Suites </div>
-            <div class="hotel-view1"> <br> This div element has position: absolute;</div>
+            <div class="hotel-view1">
+                <div class="hotel-text">
+                    <p>
+                        Located in Knightsbridge on the edge of Hyde Park, this Hotel London is both a haven of calm
+                        in the
+                        centre of the city and yet under a minute's walk from such landmarks as the famous Harrods
+                        department store.
+                        Since opening in 2012,
+                        Elegant contemporary architecture and Bvlgari's
+                        legendary flair for design are matched by class-leading quality of service.
+                        Design, service, and exceptionally generously proportioned rooms and suites combined with
+                        unrivalled facilities
+                        such as a gymnasium and physical training centre with on-site personal training team.
+                </div>
+            </div>
+            <br>
+            <img class="hotel-image" src="images/hotel.jpg">
+
             <div class="hotel-name2">Regents Court </div>
             <div class="hotel-name3">Mercurerure Hotel </div>
             <div class="hotel-name4">Spencer Stopover</div>
-           <div class="hotel-name5">Lanchasire Stay</div>
+            <div class="hotel-name5">Lanchasire Stay</div>
+
         </div>
 
         <div class="sidenav">
             <a href="#Filter">Filter Hotel By:</a>
-            <a href="#Style"><i class="fas fa-star-half-alt fa-fw"></i>  Rating</a>
-            <a href="#Floors"><i class="fas fa-home fa-fw"></i>  Style </a>
+            <a href="#Style"><i class="fas fa-star-half-alt fa-fw"></i> Rating</a>
+            <a href="#Floors"><i class="fas fa-home fa-fw"></i> Style </a>
             <a href="#floors"><i class="fas fa-building fa-fw"></i>Floors</a>
             <a href="#wifi"><i class="fas fa-wifi fa-fw"></i>Wifi</a>
             <a href="#checkintime"><i class="far fa-calendar fa-fw"></i>Check in time</a>

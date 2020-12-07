@@ -4,8 +4,9 @@
     </style>
     <title>STAY HOTELS | Booking Confirmation</title>
     <head>
-        <link rel="stylesheet" href="css/bookingstyle.css">
+        <link rel="stylesheet" href="css/bookingstyle-popup.css">
         <script src="https://kit.fontawesome.com/7775ddf689.js"></script>
+        <script src="javascript/popup.js"></script>
     </head>
 
     <body>
@@ -62,9 +63,9 @@
             <br>
 
             <div>
-                <label>Card Num:</label>
+                <label>Card Num:</label> 
                 <input type="text" name="pw" maxlength="30" />
-                <label>Security Code:</label>
+                <label>Security Code:</label> 
                 <input type="text" class = "short" />
             </div>
 
@@ -87,17 +88,31 @@
                      <h4>Is the information right? if not adjsut booking. <br></h4>
                      <div class ="new_line">
                         <button class="back_btn">Back</button>
-                     </div>
-                     
+                     </div> 
                  </div>
-
              </div>
 
 
             <div class = "conditions">
-                <button class="btn"><i class="fas fa-lock"></i> Confirm Booking</button>
+                <button class="btn" onclick="togglePopup()"><i class="fas fa-lock"></i> Confirm Booking</button>
             </div>
         </div>
+
+        <!--Popup-->
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup()">&times;</div>
+              <h1>Booking Confirmed:</h1>
+              <h2>Your booking for Manchester Picadilly Suites has been confirmed and payment has been processed. A booking confirmation email has been sent to your work email and your booking confirmation is available to print here below. </h2>
+            <br>
+            <br>
+            <br>
+            <p><a href="https://www.w3schools.com/" style="color:blue;">Print Confirmation</a> &nbsp <a href="https://www.w3schools.com/" style="color:blue;">Return to Accounts Page</a> </p>
+            </div>
+          </div>
+          
+
     </body>
 
 </html>

@@ -1,82 +1,80 @@
-body{
+body {
     background-color: rgb(233, 231, 231);
 }
-.breadcrumbs{
-    padding: 0px;
 
+.breadcrumbs {
+    padding: 0px;
 }
-.breadcrumbs__item{
+
+.breadcrumbs__item {
     display: inline-block;
 }
-.breadcrumbs__item:not(:last-of-type)::after{
+
+.breadcrumbs__item:not(:last-of-type)::after {
     content: ">";
     margin: 0 5px;
-
 }
-.breadcrumbs__link--active{
+
+.breadcrumbs__link--active {
     text-decoration: none;
     color: black;
 }
 
-.dash{
+.dash {
     border: 1px solid black;
 }
-.Step1 
-{
+
+.Step1 {
     position: fixed;
     width: 55%;
     left: 2%;
     top: 14%;
     height: 90%;
-
-
-
 }
+
 input,
 .btn {
-  width: 25%;
-  padding: 4px;
-  margin: 3px 0;
-  display: inline-block;
-  font-size: 10px;
-  line-height: 10px;
-  text-decoration: none; /* remove underline from anchors */
-  border: 1px solid black;
-
+    width: 25%;
+    padding: 4px;
+    margin: 3px 0;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 10px;
+    text-decoration: none;
+    /* remove underline from anchors */
+    border: 1px solid black;
 }
-.short 
-{
+
+.short {
     width: 7%;
-
 }
 
-p{
+p {
     font-size: 10px;
 }
-.icon-container
-{
+
+.icon-container {
     font-size: 24px;
 }
+
 label {
     font-size: 14px;
 }
 
-.card_details 
-{
+.card_details {
     border: 1px solid black;
-    position: fixed; 
+    position: fixed;
     left: 20%;
     top: 30%;
 }
-.conditions
-{
+
+.conditions {
     position: fixed;
     width: 48%;
     left: 45%;
 }
 
-
-  .btn {
+.btn {
     background-color: #5062b4;
     border: none;
     color: white;
@@ -84,141 +82,129 @@ label {
     border-radius: 4px;
     font-size: 12px;
     cursor: pointer;
-    left: 10% ;
-  }
+    left: 10%;
+}
 
-  .booking_container
-  {
+.booking_container {
     position: fixed;
-    width: 34% ;
-    top: 20% ;
-    right: 3% ;
+    width: 34%;
+    top: 20%;
+    right: 3%;
     height: 100%;
-  }
-  .booking_top
-{
+}
 
+.booking_top {
     height: 3%;
     border: 3px solid #000000;
     background-color: rgb(134, 165, 206);
 }
 
- .hotel_details
-{
+.hotel_details {
     height: 45%;
     border: 3px solid #000000;
     background-color: white;
 }
 
-.hotel_option1
-{
+.hotel_option1 {
     height: 3%;
     border: 3px solid #000000;
     background-color: white;
-
 }
-.hotel_option2
-{
+
+.hotel_option2 {
     height: 3%;
     border: 3px solid #000000;
     background-color: white;
-
 }
-.hotel_option3
-{
+
+.hotel_option3 {
     height: 3%;
     border: 3px solid #000000;
     background-color: white;
-
 }
 
-.booking_query
-{
+.booking_query {
     height: 10%;
     border: 3px solid #000000;
-    border-radius : 20px ;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
 }
-.back_btn
-{
+
+.back_btn {
     border: 2px solid #000000;
-    height: 80% ;
+    height: 80%;
     background-color: white;
+    text-decoration: none;
+    padding: 3px 8px;
+    color: #000000;
+    border-radius: 4px;
 }
-.hotel_image 
-{
+
+.hotel_image {
     margin-top: 2%;
     display: block;
     margin-left: auto;
     margin-right: auto
-
-
 }
-p.para
-{
+
+p.para {
     width: 80%;
     margin-left: 1%;
     font-size: 11px;
-
-
 }
+
 .popup.overlay {
-  position:fixed;
-  top:0px;
-  left:0px;
-  width:100vw;
-  height:100vh;
-  background:rgba(0,0,0,0.7);
-  z-index:1;
-  display:none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
 }
 
 .popup .content {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%) scale(0);
-  background:#fff;
-  width:600px;
-  height:350px;
-  z-index:2;
-  text-align:center;
-  padding:20px;
-  box-sizing:border-box;
-  font-family:"Open Sans",sans-serif;
-  border-radius: 15px;
-  border: 2px solid #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 600px;
+    height: 350px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 15px;
+    border: 2px solid #000000;
 }
 
 .popup .close-btn {
-  cursor:pointer;
-  position:absolute;
-  right:20px;
-  top:20px;
-  width:30px;
-  height:30px;
-  background:#222;
-  color:#fff;
-  font-size:25px;
-  font-weight:600;
-  line-height:30px;
-  text-align:center;
-  border-radius:50%;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 .popup.active .overlay {
-  display:block;
+    display: block;
 }
 
 .popup.active .content {
-  transition:all 300ms ease-in-out;
-  transform:translate(-50%,-50%) scale(1);
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
 }
-
-
-
-
-

@@ -29,6 +29,11 @@
             grid-area: search_box; 
             background-color: #dddddd;
         }
+        .titleheader {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
         .search_for_location {
             position: relative;
             background: #ffffff;
@@ -42,6 +47,16 @@
             font-size: 36px;
             background-color: white;
             padding: 12px 20px 12px 40px;
+        }
+        .search_button {
+            background-color: rgb(131, 131, 131);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
         }
         .image-container {
             display: grid;
@@ -80,8 +95,13 @@
     </style>
 <body>
   <header id="pageHeader">
-    <h1 style="text-align: center; top: 0; color: white;">STAY HOTELS</h1>
-    <h3 style="text-align: center; color:white;">Number 1 booking site for corporate bookings, conferences and business short stays</h3>
+      <div class="titleheader">
+        <h1 style="text-align: center; top: 0; color: white;">STAY HOTELS</h1>
+        <h3 style="text-align: center; color:white;">
+            Number 1 booking site for corporate bookings, conferences and business short stays
+        </h3>
+        <img src="images/logo.png" alt="STAY HOTELS LOGO" width="45px" border="0" position="relative">
+      </div>
   </header>
   <homepicture id="mainhomepicture">
 
@@ -111,8 +131,7 @@
                 <label for="Date Out:">Date Out:</label>
                 <input type="date" id="date_out" name="date_out">
             </form>
-
-            <a href="search_results.html" class="search_hotels">SEARCH</a>
+            <a href="search_results.html" class="search_button">Find Results</a>
         </div>
         <div class="Company_details" style="text-align: center;">
             <p>

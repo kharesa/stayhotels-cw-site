@@ -124,17 +124,17 @@ header, maps, dates, filters, results div {
 
     tr {
         background-color: rgb(233, 231, 231);
-    border: none;
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: flex-start;
+        border: none;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: flex-start;
     
     }
 
     tr:first-child:hover {
-    cursor: default;
-    background-color: #fff;
+        cursor: default;
+        background-color: #fff;
     }
 
     tr:hover {
@@ -142,17 +142,17 @@ header, maps, dates, filters, results div {
     }
 
     .expanded-row-content {
-    border-top: none;
-    display: grid;
-    grid-column: 1/-1;
-    justify-content: flex-start;
-    color: #AEB1B3;
-    font-size: 13px;
-    background-color: #fff;
+        border-top: none;
+        display: grid;
+        grid-column: 1/-1;
+        justify-content: flex-start;
+        color: #AEB1B3;
+        font-size: 13px;
+        background-color: #fff;
     }
 
     .hide-row {
-    display: none;
+        display: none;
     }
 
     .calendar

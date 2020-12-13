@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <style>
+        .breadcrumbs {
+            padding: 0px;
+        }
+
+        .breadcrumbs__item {
+            display: inline-block;
+        }
+
+        .breadcrumbs__item:not(:last-of-type)::after {
+            content: ">";
+            margin: 0 5px;
+        }
+
+        .breadcrumbs__link--active {
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+    <body>
+        <div class="titleheader">
+            <img src="images/logo.png" alt="STAY HOTELS LOGO" width="45px" border="0" style="position:right">
+            <h1 style="text-align: center; color: white;">STAY HOTELS</h1>
+            <ul class="breadcrumbs">
+                <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
+                <li class="breadcrumbs__item">
+                    <a href="homepage.html" class="breadcrumbs__link">Homepage</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="search_results.html" class="breadcrumbs__link--active">Search Results</a>
+                </li>
+            </ul>
+        </div>
+
+    </body>
+</html>

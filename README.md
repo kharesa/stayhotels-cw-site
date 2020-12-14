@@ -6,7 +6,8 @@ This website is implementing the design created in the previous coursework-2 and
 
 # What does this include?
 
-There are 3 folders and 12 files including this readme file and 11 HTML files of the pages. The styles are stored in the ccs folders and the images used are held in the images folder.
+There are 3 folders and 12 files including this readme file and 11 HTML files of the pages. 
+Example shown below:
 
 ```html
 <!--HTML Document for Group 2 page designed by Kharesa-Kesa and Kingsley Charles -->
@@ -27,6 +28,9 @@ There are 3 folders and 12 files including this readme file and 11 HTML files of
             margin: 0;
         }
 ```
+The styles are stored in the ccs folders and the images used are held in the images folder.
+Example shown below:
+
 ```css
 /* CCS STYLE SHEET deisgned by Group 2 Khareas-Kesa and Kingsley*/
 header, footer, homepicture, search_box, div {
@@ -44,5 +48,7 @@ header, footer, homepicture, search_box, div {
 
 
 # What is this for?
+
+The focus of this work is on website design, usability and interactivity. There is no sophisticated back end programs such as database systems. We are interested in how well our implementation fits our design.
 
 The code in the following files were authored by Kharesa-Kesa and Kingsley. This is being used academically and does not represent any commercial entity or company.

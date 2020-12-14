@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<title>STAY HOTELS | Room Selection</title>
+<style>
+    body {
+        background-color: rgb(233, 231, 231);
+        display: grid;
+        grid-template-areas: "header header" "titlebox gallery" "text room_features";
+        grid-template-rows: 7.5% 40% 1fr;
+        grid-template-columns: 30% 1fr;
+        grid-gap: 10px;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    header,
+    titlebox,
+    gallery,
+    map,
+    text,
+    room_features,
+    arrow,
+    div {
+        padding: 5px;
+        background-color: rgb(233, 231, 231);
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="css/room_selection.css">
+</head>
+
+<body>
+    <header id="pageHeader">
+        <ul class="breadcrumbs">
+            <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
+            <li class="breadcrumbs__item">
+                <a href="homepage.html" class="breadcrumbs__link">Homepage</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="search_results.html" class="breadcrumbs__link">Search Results</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="room_selection.html" class="breadcrumbs__link--active">Room Selection</a>
+            </li>
+        </ul>
+        <a href="homepage.html">
+            <img src="images/logo.png" alt="STAY HOTELS LOGO" width="45px" border="0" position="relative">
+        </a>
+
+    </header>
+    <titlebox id="mainTitle">
+        <h1 style="text-align: center">
+            Mercure Hotel
+        </h1>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9931.445519416862!2d-0.1757978!3d51.5157591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fabae3ec1c1ebb!2sHilton%20London%20Paddington!5e0!3m2!1sen!2suk!4v1606224270385!5m2!1sen!2suk" width="100%"
+                height="200%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+        </div>
+
+    </titlebox>
+    <gallery id="mainGallery">
+        <div class="gallery">
+            <img src="images/mh_cleaningset.jpg" width="250px">
+            <div class="desc">Up to date facilities</div>
+        </div>
+        <div class="gallery">
+            <img src="images/mh_russel_square.png" width="250px">
+            <div class="desc">Russell Square is 5 minutes away</div>
+        </div>
+        <div class="gallery">
+            <img src="images/mh_diningarea.jpg" width="250px">
+            <div class="desc">Dining area</div>
+        </div>
+        <div class="gallery">
+            <img src="images/mh_24hrdesk.jpg" width="250px">
+            <div class="desc">24hr service desk</div>
+        </div>
+    </gallery>
+    <text id="mainText">
+        <p>
+            This 4-star boutique hotel is 550 yards from both Holborn and Russell Square Tube stations. 
+            The air-conditioned rooms feature free Wi-Fi, a flat-screen TV and a rainfall shower. 
+            Mercure London Bloomsbury Hotel is less than a mile from Covent Garden, Oxford Street and Soho. 
+            The British Museum and the shops and theatres of the West End are within easy reach. Buses and taxis are available outside the hotel. 
+            Euston and King's Cross St Pancras, for the Eurostar, can both be reached in around 5 minutes' walk.
+        </p>
+        <p>
+            The Boardroom is ideal for smaller meetings, interviewing and private dining. 
+            Wifi is complimentary and the room is fully airconditioned. 14 boardroom style 15 U-shape 30 Theatre style.
+        </p>
+
+        <p>
+            <b>
+            Cancellation:
+            </b>
+        </p>
+            Policies may vary depending on the rate and dates of your reservation. Please refer to your reservation confirmation to verify your cancellation policy. 
+            If you need further assistance, call the hotel directly or contact customer service. 
+            Alternatively, you can cancel your reservation online.
+        </p>
+        <p>
+            <b>
+                COVID-19 Update:
+            </b>
+        </p>
+        <p>
+            With varying government restrictions in different parts of the UK, we’re constantly reviewing our hotel and restaurant policies to ensure we open and operate in line with these. 
+            With this in mind, please ensure you check the guidance or regulations applicable to you and your destination before travelling in England,
+        </p>
+
+        <a href  = "search_results.html" class="arrow_back" style="vertical-align:middle">
+            <span>
+                Back to Results page
+            </span>
+        </a>
+
+    </text>
+    <room_features id="mainRoom_features">
+        <table>
+            <tr>
+                <th>Visuals</th>
+                <th>Room Description</th>
+                <th>Options</th>
+                <th>Price</th>
+                <th>Room services?</th>
+                <th>Reserve</th>
+            </tr>
+            <tr>
+                <td><img src="images/mh_singlebed.jpg" width="250px"></td>
+                <td>
+                    Standard Single Room
+                </td>
+                <td>
+                    Food And Beverage Facilities
+                    Coffee/tea making facilities, Illy coffee machine included
+                </td>
+                <td>£105</td>
+                <td>
+                    <p>
+                        Room Service available at a charge
+                    </p>
+                    <p>
+                        <form action="/action_page.php">
+                            <input type="checkbox" id="RoomService" name="RoomService" value="RS">
+                            <label for="vehicle1"> Add Room Service</label><br>
+                        </form>
+                    </p>
+                </td>
+                <td>
+                    <a href="booking_details_confirmation popup mh.html" class="button">Reserve</a>
+                </td>
+
+            </tr>
+            <tr>
+                <td><img src="images/mh_doubleroom.jpg" width="250px"></td>
+                <td>
+                    Double Room
+                </td>
+                <td>
+                    <p>
+                        Food And Beverage Facilities
+                        Illy coffee machine, Coffee/tea making facilities 
+                    </p>
+                    <p>
+                        <form action="/action_page.php">
+                            <input type="checkbox" id="RoomService" name="RoomService" value="RS">
+                            <label for="vehicle1"> Extended Satellite/cable colour TV available </label><br>
+                        </form>
+                    </p>
+                    <p>
+                        <form action="/action_page.php">
+                            <input type="checkbox" id="RoomService" name="RoomService" value="RS">
+                            <label for="vehicle1"> Provided Business Desk</label><br>
+                        </form>
+                    </p>
+                </td>
+                <td>£135</td>
+                <td>
+                    <p>
+                        Room Service available at a charge
+                    </p>
+                    <p>
+                        <form action="/action_page.php">
+                            <input type="checkbox" id="RoomService" name="RoomService" value="RS">
+                            <label for="vehicle1"> Add Room Service</label><br>
+                        </form>
+                    </p>
+                </td>
+                <td>
+                    <a href="booking_details_confirmation popup mh.html" class="button">Reserve</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="images/mh_kingsize.jpg" width="250px"></td>
+                <td>
+                    Kings Size Room
+                </td>
+                <td>
+                    <p>
+                        Free Cancellation                    
+                    </p>
+                    <p>
+                        Extended Satellite/cable colour TV available
+                    </p>
+                    <p>
+                        Provided Business Desk
+                    </p>
+                    <p>
+                        Zone 1 Oyster included with stay
+                    </p>
+                </td>
+                <td>
+                    £190
+                </td>
+                <td>
+                    <p>
+                        Room Service included
+                    </p>
+                </td>
+                <td>
+                    <a href="booking_details_confirmation popup mh.html" class="button">Reserve</a>
+                </td>
+            </tr>
+        </table>
+    </room_features>
+</body>
+</html>

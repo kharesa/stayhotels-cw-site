@@ -58,7 +58,8 @@ This project is as of now, complete, the code is free to browse but no future pu
 
 # Support
 
-For any contact for this reach out to kharesa1, kingslet108 or lin.wang@qmul.ac.uk. [QMUL](https://qmplus.qmul.ac.uk/course/view.php?id=15599)
+For any contact for this reach out to kharesa1, kingslet108 or lin.wang@qmul.ac.uk. 
+Completed for coursework at [QMUL](https://qmplus.qmul.ac.uk/course/view.php?id=15599)
 
 # Authors and acknowledgment
 

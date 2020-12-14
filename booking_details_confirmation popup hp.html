@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+</style>
+<title>STAY HOTELS | Booking Confirmation</title>
+
+<head>
+    <link rel="stylesheet" href="css/bookingstyle-popup.css">
+    <script src="https://kit.fontawesome.com/7775ddf689.js"></script>
+    <script src="javascript/popup.js"></script>
+</head>
+
+<body>
+    <div class="Top of the Page">
+        <ul class="breadcrumbs">
+            <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
+            <li class="breadcrumbs__item">
+                <a href="homepage.html" class="breadcrumbs__link">Homepage</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="search_results.html" class="breadcrumbs__link">Search Results</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="room_selection_hp.html" class="breadcrumbs__link">Room Selection </a>
+
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="booking_details_confirmation popup.html" class="breadcrumbs__link--active">Booking Details and Confirmation </a>
+            </li>
+        </ul>
+        <a href="homepage.html">
+            <img src="images/logo.png" alt="STAY HOTELS LOGO" width="50px" border="0">
+        </a>
+    </div>
+
+    <div class="Step1">
+        <h4><i class="fas fa-arrow-left" style="font-size:36px;"></i>Step 1 : Your Details</h4>
+        <div class="dash"></div>
+        <P>First Name</P>
+        <input type="text" name="firstname" required>
+        <P>Last Name</P>
+        <input type="text" name="lastname" required>
+        <P>Email</P>
+        <input type="text" name="email" required>
+        <P>Phone</P>
+        <input type="text" name="phone" required>
+        <h4>Step 2 : Payment </h4>
+        <div class="dash"></div>
+        <label for="fname">Accepted Cards</label>
+        <div class="icon-container">
+            <i class="fa fa-cc-visa" style="color:navy"></i>
+            <i class="fa fa-cc-amex" style="color:blue;"></i>
+            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            <i class="fa fa-cc-discover" style="color:orange;"></i>
+        </div>
+
+        <div>
+            <label>Card Name :</label>
+            <input type="text" name="id" />
+            <label>Expiry Date:</label>
+            <input type="text" class="short" placeholder="MM/YY" />
+            <label>Company:</label>
+            <input type="text" name="id" />
+        </div>
+        <br>
+
+        <div>
+            <label>Card Num:</label>
+            <input type="text" name="pw" maxlength="30" />
+            <label>Security Code:</label>
+            <input type="text" class="short" />
+        </div>
+
+        <!--Booking details-->
+        <div class="booking_container">
+            <div class="booking_top">Your Booking details.</div>
+            <div class="hotel_details">
+                <img class="hotel_image" src="images/hotel.jpg" height=75%>
+                <p class="para">
+                    Located in Bayswater on the edge of Hyde Park, this Hotel London is both a haven of calm in the centre of the city and yet under a minute's walk from such landmarks as the famous Harrods department store.
+            </div>
+            <div class="hotel_option1">Check in,check out </div>
+            <div class="hotel_option2">Number of rooms</div>
+            <div class="hotel_option3">Additional service</div>
+            <br>
+            <div class="booking_query">
+                <h4>Is the information right? if not adjsut booking. <br></h4>
+                <div class="new_line">
+                    <a href="room_selection_hp.html" class="back_btn">Back</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="conditions">
+            <button class="btn" onclick="togglePopup()"><i class="fas fa-lock"></i> Confirm Booking</button>
+        </div>
+    </div>
+
+    <!--Popup-->
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h1>Booking Confirmed :</h1>
+            <h2>Your booking for Hilton London Paddington Suites has been confirmed and payment has been processed. A booking confirmation email has been sent to your work email and your booking confirmation is available to print here below. </h2>
+            <br>
+            <p><a href="homepage.html" style="color:blue;">Return to Home page</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

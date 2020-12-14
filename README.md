@@ -1,4 +1,6 @@
-# Task-3-Website-development
+# Task-3-Website-development Group 2 STAY HOTELS
+
+# Description 
 
 This part of the coursework required us to develop the website using the design created in the previous deliverable of coursework 2.
 
@@ -46,9 +48,18 @@ header, footer, homepicture, search_box, div {
     background-repeat: no-repeat;
 ```
 
-
 # What is this for?
 
 The focus of this work is on website design, usability and interactivity. There is no sophisticated back end programs such as database systems. We are interested in how well our implementation fits our design.
+
+# Project status
+
+This project is as of now, complete, the code is free to browse but no future pulls will be commited past the 17th December 2020
+
+# Support
+
+For any contact for this reach out to kharesa1, kingslet108 or lin.wang@qmul.ac.uk. [QMUL](https://qmplus.qmul.ac.uk/course/view.php?id=15599)
+
+# Authors and acknowledgment
 
 The code in the following files were authored by Kharesa-Kesa and Kingsley. This is being used academically and does not represent any commercial entity or company.

@@ -1,56 +1,145 @@
-<!--Group 2 coursework 3 Website development Kharesa & Kingsley-->
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<style>
-    body {
-        background-color: rgb(180, 180, 180);
-        height: 100%;
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
 <title>STAY HOTELS | Homepage</title>
-
-<head>
-    <link rel="stylesheet" href="css/homepage.css">
-</head>
-
-<body>
-
-    <div class="Top_page">
-        <img src="images/logo.png" alt="STAY HOTELS LOGO" width="100px" border="0">
-        <h1 style="text-align: center; top: 0; color: white;">STAY HOTELS</h1>
-        <h3 style="text-align: center; color:white;">Number 1 booking site for corporate bookings, conferences and business short stays</h3>
-    </div>
-    <div class="Search_box">
+    <style>
+        body { 
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "homepicture search_box";
+            grid-template-rows: 15% 1fr;
+            grid-template-columns: 70% 1fr;
+            grid-gap: 0px;
+            height: 100vh;
+            margin: 0;
+        }
+        header, footer, homepicture, search_box, div {
+            padding: 20px;
+        }
+        #pageHeader {
+            grid-area: header;
+            background-color: rgb(131, 131, 131);
+        }
+        #mainhomepicture { 
+            grid-area: homepicture;
+            background-image: url("images/homepagereception.jpg");
+            background-repeat: no-repeat;
+        }
+        #mainsearch_box { 
+            grid-area: search_box; 
+            background-color: #dddddd;
+        }
+        .titleheader {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+        .search_for_location {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid #999999;
+            border-radius: 5px;
+            min-height: 60px;
+            margin: 6px 2px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            font-size: 36px;
+            background-color: white;
+            padding: 12px 20px 12px 40px;
+        }
+        .search_button {
+            background-color: rgb(131, 131, 131);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .image-container {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            padding: 1px;
+        }
+        .grid-item1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-image: url("images/london-stock-image.jpg");
+            font-size: 30px;
+            text-align: center;
+        }
+        .grid-item2 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-image: url("images/edinburgh-scotland-glance.jpg");
+            font-size: 30px;
+            text-align: center;
+        }
+        .grid-item3 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-image: url("images/dublin-skyline.jpg");
+            font-size: 30px;
+            text-align: center;
+        }
+        .grid-item4 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-image: url("images/manchester-stock-image.jpg");
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+    <body>
+    <header id="pageHeader">
+        <div class="titleheader">
+            <img src="images/logo.png" alt="STAY HOTELS LOGO" width="45px" border="0" style="position:relative; padding: 5px;">
+            <h1 style="text-align: center; color: white;">STAY HOTELS</h1>
+        </div>
+    </header>
+    <homepicture id="mainhomepicture"></homepicture>
+    <search_box id="mainsearch_box">
         <h2 style="text-align: center;">Search for your business trip here</h2>
-        <div class="Search_box2">
-            <form class="Search_for_location">
-                Search the area you wish to stay in:<br>
-                <input type="text" name="location" placeholder="Search by location, county, post code or city name" size="50">
-                <div class="date_side" style="text-align: right;">
-                    <input type="text" name="location" placeholder="Rooms:   " size="5">
-                    <input type="text" name="Guests:" placeholder="Guests:  " size="5">
-                    <input type="text" name="Date In:" placeholder="Date In:" size="6">
-                    <input type="text" name="Date Out:" placeholder="Date Out:" size="6">
+        <form class="Search_for_location" style="text-align:center">
+            Search the area you wish to stay in:<br>
+            <input type="text" name="location" placeholder="Search by location, county, post code or city name" size="50">
+        </form>
+            <div class="search_criteria" style="text-align: center;">
+                <form action="/action_page.php">
+                    <label for="rooms">Rooms:</label>
+                    <input type="number" id="rooms" name="rooms" min="1" max="6">
+                </form>
+                <form action="/action_page.php">
+                    <label for="quantity">Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" max="6">
+                </form>
+                <form action="/action_page.php">
                     <img src="images/calendericon.png" alt="Calendar" width="10px" border="0">
-                    <a href="search_results.html" class="search_hotels">SEARCH</a>
-                </div>
-        </div>
-
-    </div>
-
-    <div class="bottom_bar_container">
-        <div class="Help_bar">
-            <button class="button">Change Language</button>
-            <button class="button">Corporate Partners</button>
-            <button class="button">View</button>
-            <button class="button">Help</button>
-        </div>
-    </div>
-</body>
-
+                    <label for="Date In:">Date In:</label>
+                    <input type="date" id="date_in" name="date_in">
+                </form>
+                <form action="/action_page.php">
+                    <img src="images/calendericon.png" alt="Calendar" width="10px" border="0">
+                    <label for="Date Out:">Date Out:</label>
+                    <input type="date" id="date_out" name="date_out">
+                </form>
+                <a href="search_results.html" class="search_button">Find Results</a>
+            </div>
+            <div class="Company_details" style="text-align: center; padding:0%">
+                <p>
+                    We are a specialist corporate accommodation company;
+                    with over 100 hotel locations and 50 meeting spaces across the UK we can ensure you and your company
+                    a productive and professional stay.
+                </p>
+            </div>
+            <div class="image-container">
+                <div class="grid-item1">LONDON</div>
+                <div class="grid-item2">EDINBURGH</div>
+                <div class="grid-item3">DUBLIN</div>  
+                <div class="grid-item4">MANCHESTER</div>
+            </div>
+    </search_box>
+    </body>
 </html>

@@ -1,119 +1,374 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<style>
+    <title>STAY HOTELS | Search Results</title>
+    <head>
+        <script src="https://kit.fontawesome.com/7775ddf689.js"></script>
+    </head>
+    <style>
+        body { 
+            background-color: rgb(233, 231, 231);
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "filters dates container"
+                "filters results container"
+                "filters results .";
+            grid-template-rows: 10% 10% 80%;
+            grid-template-columns: 15% 1fr 27%;
+            grid-gap: 10px;
+            height: 100vh;
+            margin: 0;
+        }
+        header, maps, dates, filters, results div {
+            padding: 20px;
+            background-color: rgb(233, 231, 231);
+            }
+            #pageHeader {
+                grid-area: header;
+                padding: 20px;
+                background-color: rgb(131, 131, 131);
+            }
+            #mainfilters { 
+                grid-area: filters; 
+                padding: 20px;
+                background-color: rgb(233, 231, 231);
+                height: auto;
+                width: auto;
+                z-index: 1;
+                overflow-x: hidden;
+                padding-top: 10px;
+                border: 2px solid black;
+            }
+            #mainfilters a {
+                padding: 5px 5px 3px 12px;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: bold;
+                color: #020202;
+                display: block;
+            }
+            #maindates { 
+                grid-area: dates;  
+                padding: 20px;
+                background-color: rgb(233, 231, 231);
+            }
+            #mainresults {
+                grid-area: results;
+                background-color: rgb(233, 231, 231);
+                overflow: scroll;
+            }
+            #maincontainer {
+                grid-area: container;
+                background-color: rgb(233, 231, 231);
+            }
 
-</style>
-<title>STAY HOTELS | Search Results</title>
+            .btn-group .button {
+                background-color: #686868; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                }
 
-<head>
-    <script src="https://kit.fontawesome.com/7775ddf689.js"></script>
-    <link rel="stylesheet" href="css/mystyle.css">
-</head>
+            .btn-group .button:hover {
+                background-color: #3e8e41;
+            }
 
-<body>
-    <div class="Top of the Page">
+            .breadcrumbs {
+                padding: 0px;
+            }
+
+            .breadcrumbs__item {
+                display: inline-block;
+            }
+
+            .breadcrumbs__item:not(:last-of-type)::after {
+                content: ">";
+                margin: 0 5px;
+            }
+
+            .breadcrumbs__link--active {
+                text-decoration: none;
+                color: black;
+            }
+
+            .sidenav a {
+                padding: 5px 5px 3px 12px;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: bold;
+                color: #020202;
+                display: block;
+            }
+            .proceed_button {
+                background-color: rgb(131, 131, 131);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            table {
+            width: 500px;
+            border: none;
+            border-top: 1px solid #EEEEEE;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: rgb(233, 231, 231);
+            }
+
+            td {
+                border: 1px solid #EEEEEE;
+                border-top: none;
+                text-align: left;
+                padding: 8px;
+                color: #363D41;
+                font-size: 14px;
+                background-color: rgb(233, 231, 231);
+            }
+            th {
+
+            border-top: none;
+            text-align: left;
+            padding: 8px;
+            color: #363D41;
+            font-size: 14px;
+            background-color: rgb(134, 165, 206);
+            }
+
+            tr {
+                background-color: rgb(233, 231, 231);
+                border: none;
+                cursor: pointer;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: flex-start;
+            
+            }
+
+            tr:first-child:hover {
+                cursor: default;
+                background-color: #fff;
+            }
+
+            tr:hover {
+                background-color: rgb(27, 137, 228);
+            }
+
+            .expanded-row-content {
+                border-top: none;
+                display: grid;
+                grid-column: 1/-1;
+                justify-content: flex-start;
+                color: #AEB1B3;
+                font-size: 13px;
+                background-color: #fff;
+            }
+
+            .hide-row {
+                display: none;
+            }
+   
+            .calendar
+            {
+                position: absolute;
+                border: 4px solid #000000;
+                width: 26%;
+                height: 35%;
+                right : 0.4%
+            }
+            .maps 
+            {
+                position: absolute;
+                border: 4px solid #000000;
+                width: 26%;
+                height: 35%;
+                right : 0.4% ;
+                top : 60% ;
+            }
+    </style>
+    <body>
+    <header id="pageHeader">
         <ul class="breadcrumbs">
             <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
             <li class="breadcrumbs__item">
                 <a href="homepage.html" class="breadcrumbs__link">Homepage</a>
             </li>
-
             <li class="breadcrumbs__item">
                 <a href="search_results.html" class="breadcrumbs__link--active">Search Results</a>
-
             </li>
-
-
         </ul>
-
-        <h1 style="text-align:center">Results</h1>
-
-        <div id="logo">
-            <a href="homepage.html">
-                <img src="images/logo.png" alt="STAY HOTELS LOGO" width="50px">
-            </a>
+    </header>
+    <dates id="maindates">
+        <div class="btn-group">
+            <a href="homepage.html" style="text-decoration:none;" class="button">Change Date</a>
+            <a href="homepage.html" class="button">Change Location</a>
+            <a href="homepage.html" class="button">Change Rooms</a>
+            <a href="homepage.html" class="button">Change Guests</a>
         </div>
-        <!--the logo-->
+    </dates>
+    <filters id="mainfilters">
+        <a href="#Filter">Filter Hotel By:</a>
+        <a href="#Style"><i class="fas fa-star-half-alt fa-fw"></i> Rating</a>
+        <a href="#Floors"><i class="fas fa-home fa-fw"></i> Style </a>
+        <a href="#floors"><i class="fas fa-building fa-fw"></i>Floors</a>
+        <a href="#wifi"><i class="fas fa-wifi fa-fw"></i>Wifi</a>
+        <a href="#checkintime"><i class="far fa-calendar fa-fw"></i>Check in time</a>
+        <a href="#checkouttime"><i class="far fa-calendar-times fa-fw"></i>Check out time</a>
+        <a href="#petsallowed"><i class="fas fa-dog fa-fw"></i>Pets Allowed</a>
+        <a href="#Roomservice"><i class="fas fa-utensils fa-fw"></i>Room Service</a>
+        <br>
 
-        <!--the results border-->
-        <ul>
+        <a href="#contact">Filter Facilities By:</a>
 
-        </ul>
-
-        <div class="all-view">
-
-            <div class="hotel-name1"> <a href="room_selection.html" style="text-decoration:none; Color : black;">Hilton Paddington</a></div>
-            <div class="hotel-view1">
-                <div class="hotel-text">
-                    <p class="para">
-                        Located in Bayswater on the edge of Hyde Park, this Hotel London is both a haven of calm in the centre of the city and yet under a minute's walk from such landmarks as the famous Harrods department store. Since opening in 2012, Elegant contemporary architecture
-                        and Bvlgari's legendary flair for design are matched by class-leading quality of service. Design, service, and exceptionally generously proportioned rooms and suites combined with unrivalled facilitie such as a full gymnasium and
-                        physical training centre with on-site Workshop personal training team. 11 single treatment rooms and 1 private spa suite Spa; 25 metres, three-lane swimming pool; 47 seat cinema; to deliver a city hotel experience that is unique
-                        in the world.
-
-                </div>
-                <a href="room_selection.html">
-                    <img class="hotel-image" src="images/hotel.jpg">
-                </a>
-            </div>
-
-            <div class="hotel-name2">Regents Court </div>
-            <div class="hotel-name3">Mercurerure Hotel </div>
-            <div class="hotel-name4">Spencer Stopover</div>
-            <div class="hotel-name5">Lanchasire Stay</div>
-
+        <div class="RoomType">
+            <a href="#pool"><i class="fas fa-tint fa-fw"></i>Pool</a>
+            <a href="#office"><i class="fas fa-desktop fa-fw"></i>Office</a>
+            <a href="#spa"><i class="fas fa-spa fa-fw"></i>Spa</a>
+            <a href="#conference room"><i class="fab fa-confluence fa-fw"></i>Conference Rooms</a>
+        </div>
+        <br>
+        <a href="#filterby"><i class="fas fa-globe-asia fa-fw"></i>Filter Location By:</a>
+        <div class="Location">
+            <a href="#0miles">0 miles</a>
+            <a href="#5miles">5 miles</a>
+            <a href="#10miles">10 miles</a>
+            <a href="#20miles">under 20 miles</a>
+            <a href="#any">Any</a>
         </div>
 
+        <div class="LocationFilters">
+            <br>
+            <a href="#clearallfilters"><i class="fas fa-backspace fa-fw"></i>Clear all filters</a>
+        </div>
+    </filters>
+    <results id="mainresults">
+        <table>
+            <tr>
+              <th></th>
+              <th>Hotel -click to expand</th>
+              <th>Price</th>
+            </tr>
+            <tr onClick='toggleRow(this)'>
+                <td>
+                    <img src="images/hotel.jpg" width="210px">                </td>
+              <td>
+                  <p>
+                    Hilton Paddington
+                </p>
+                <p>
+                  <a href="#Style" style="color: black">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt fa-fw"></i>
+                  </a>
+                </p>
+                </td>
+              <td>
+                  <a href="room_selection.html" class="proceed_button">View Rooms from £98</a>
+                </td>
+              <td class='expanded-row-content hide-row'>Located in Bayswater on the edge of Hyde Park, this Hotel London is both a haven of calm in the centre of the city and yet under a minute's walk from such landmarks as the famous Harrods department store. Since opening in 2012, Elegant contemporary architecture
+                and Bvlgari's legendary flair for design are matched by class-leading quality of service. Design, service, and exceptionally generously proportioned rooms and suites combined with unrivalled facilitie such as a full gymnasium and
+                physical training centre with on-site Workshop personal training team. 11 single treatment rooms and 1 private spa suite Spa; 25 metres, three-lane swimming pool; 47 seat cinema; to deliver a city hotel experience that is unique
+                in the world.</td>
+            </tr>
+            <tr onClick='toggleRow(this)'>
+              <td><img src="images/regentscourt.jpg" width="210px"></td>
+              <td>
+                  <p>
+                      Regents Court
+                  </p>
+                  <p>
+                    <a href="#Style" style="color: black">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt fa-fw"></i>
+                    </a>
+                  </p>
+                </td>
+              <td>                  
+                  <a href="room_selection.html" class="proceed_button">View Rooms from £78</a>
+              </td>
+              <td class='expanded-row-content hide-row'>This establishment provides guests with limitless luxury while in London. 
+                  GUESTROOMS & SUITES offer a prolonged respite from the city. Resting in bed or reading on a chaise - surrounded by the simple yet pristine. 
+                  Ethereal at daybreak and halo gold at dusk, each accommodation is a celebration of contemporary design, styled with a nod to French tradition.</td>
+            </tr>
+            <tr onClick='toggleRow(this)'>
+                <td><img src="images/Mercurerurehotel.jpg" width="210px"></td>
+                <td>
+                    <p>
+                        Mercurerure Hotel
+                    </p>
+                    <p>
+                      <a href="#Style" style="color: black">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt fa-fw"></i>
+                      </a>
+                    </p>
+                </td>
+              <td>                  
+                  <a href="room_selection.html" class="proceed_button">View Rooms from £120</a>
+              </td>
+              <td class='expanded-row-content hide-row'>With the flair of a private European club and the charm of an Old World mansion, The Mercurerure Hotel is a classic but contemporary luxury hotel in one of London's most exclusive neighborhoods. 
+                  This exclusive retreat rests gracefully among London's most respected museums and enticing shopping venues, all an easy walking distance for hotel guests. 
+                  Visit the Natural History Museum in the morning, and spend a lavish afternoon at Harrods - all with plenty of time to be back in your room for a relaxing soak in a marvelously Victorian-designed bath. 
+                  Your senses will be delighted by rich textures, details and forms on the fabrics, as well as authentic period furniture. Guest rooms also feature bay windows, fireplaces, wood floors and original artwork.</td>
+            </tr>
+            <tr onClick='toggleRow(this)'>
+                <td><img src="images/spenserstopover.jpg" width="210px"></td>
+                <td>
+                    <p>
+                        Spenser Stopover
+                    </p>
+                    <p>
+                      <a href="#Style" style="color: black">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </a>
+                    </p>
+                </td>
+                <td>                  
+                    <a href="room_selection.html" class="proceed_button">View Rooms from £105</a>
+                </td>
+                <td class='expanded-row-content hide-row'>The Spenser Stopover is the closest you'll get to a sleepover with the Queen without a state visit invitation.
+                     The hotel is directly across from the royal residence on property that enjoys a colorful past – the Duke of Buckingham lived here in the 1600s, followed by an apothecary and a Court dressmaker. 
+                     The Rubens, which was built in 1912, housed the Polish army during WWII and gave respite to exiled Charles de Gaulle. 
+                     The hotel's decadent – and often equally colorful – rooms and suites are a comfortable home base in the epicenter of London.</td>
+              </tr>
+          </table>
+          <script>
+            const toggleRow = (element) => {
+              element.getElementsByClassName('expanded-row-content')[0].classList.toggle('hide-row');
+              console.log(event);
+            }
+          </script>
+    </results>
+    <container id="maincontainer">
         <div class="calendar">
             <!--This is a calendar -->
             <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=c3dpZnRkZWFsc2luQGdtYWlsLmNvbQ&amp;color=%23039BE5" style="border:solid 1px #777" width="100%" height="100%" frameborder="0"
                 scrolling="no"></iframe>
-
         </div>
-
         <div class="maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9931.445519416862!2d-0.1757978!3d51.5157591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fabae3ec1c1ebb!2sHilton%20London%20Paddington!5e0!3m2!1sen!2suk!4v1606224270385!5m2!1sen!2suk" width="100%"
                 height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-
-
-        <div class="sidenav">
-            <a href="#Filter">Filter Hotel By:</a>
-            <a href="#Style"><i class="fas fa-star-half-alt fa-fw"></i> Rating</a>
-            <a href="#Floors"><i class="fas fa-home fa-fw"></i> Style </a>
-            <a href="#floors"><i class="fas fa-building fa-fw"></i>Floors</a>
-            <a href="#wifi"><i class="fas fa-wifi fa-fw"></i>Wifi</a>
-            <a href="#checkintime"><i class="far fa-calendar fa-fw"></i>Check in time</a>
-            <a href="#checkouttime"><i class="far fa-calendar-times fa-fw"></i>Check out time</a>
-            <a href="#petsallowed"><i class="fas fa-dog fa-fw"></i>Pets Allowed</a>
-            <a href="#Roomservice"><i class="fas fa-utensils fa-fw"></i>Room Service</a>
-            <br>
-
-            <a href="#contact">Filter Facilities By:</a>
-
-            <div class="RoomType">
-                <a href="#pool"><i class="fas fa-tint fa-fw"></i>Pool</a>
-                <a href="#office"><i class="fas fa-desktop fa-fw"></i>Office</a>
-                <a href="#spa"><i class="fas fa-spa fa-fw"></i>Spa</a>
-                <a href="#conference room"><i class="fab fa-confluence fa-fw"></i>Conference Rooms</a>
-            </div>
-            <br>
-            <a href="#filterby"><i class="fas fa-globe-asia fa-fw"></i>Filter Location By:</a>
-            <div class="Location">
-                <a href="#0miles">0 miles</a>
-                <a href="#5miles">5 miles</a>
-                <a href="#10miles">10 miles</a>
-                <a href="#20miles">under 20 miles</a>
-                <a href="#any">Any</a>
-            </div>
-
-            <div class="LocationFilters">
-                <br>
-                <a href="#clearallfilters"><i class="fas fa-backspace fa-fw"></i>Clear all filters</a>
-            </div>
-        </div>
-    </div>
-
-</body>
-
+    </container>
+    </body>
 </html>

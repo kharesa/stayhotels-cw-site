@@ -1,3 +1,5 @@
+<!--HTML Document for Group 2 search results page designed by Kharesa-Kesa and Kingsley Charles -->
+<!--November - December 2020 -->
 <!doctype html>
 <html>
     <title>STAY HOTELS | Search Results</title>
@@ -5,6 +7,7 @@
         <script src="https://kit.fontawesome.com/7775ddf689.js"></script>
     </head>
     <style>
+         /* Like the other sites, this page was laid out with the grid format*/
         body { 
             background-color: rgb(233, 231, 231);
             display: grid;
@@ -62,8 +65,9 @@
                 background-color: rgb(233, 231, 231);
             }
 
+            /* Buttons grouped together to style them all the same collectively*/
             .btn-group .button {
-                background-color: #686868; /* Green */
+                background-color: #686868; 
                 border: none;
                 color: white;
                 padding: 15px 32px;
@@ -114,6 +118,7 @@
                 display: inline-block;
                 font-size: 16px;
             }
+            /* The table of results is styled here*/
             table {
             width: 500px;
             border: none;
@@ -251,14 +256,16 @@
         </div>
     </filters>
     <results id="mainresults">
-                <!--the breadcrumb trail for the navigation bar, the --active is a different style to the others-->
+                <!--here a table was used to display the different website results row by row-->
 
         <table>
+            <!--here the table headers are declared, the first one has no text becuase it'll be for images-->
             <tr>
               <th></th>
               <th>Hotel -click to expand</th>
               <th>Price</th>
             </tr>
+                <!--On click using the action of dropping down to reveal an extra row, this row will have additional information for the users -->
             <tr onClick='toggleRow(this)'>
                 <td>
                     <img src="images/hotel.jpg" width="210px">                </td>
@@ -278,6 +285,7 @@
                 </td>
               <td>
                   <a href="room_selection_hp.html" class="proceed_button">View Rooms from £98</a>
+                      <!--here the user navigates on to the room selection page hp, short for hilton paddington-->
                 </td>
               <td class='expanded-row-content hide-row'>Located in Bayswater on the edge of Hyde Park, this Hotel London is both a haven of calm in the centre of the city and yet under a minute's walk from such landmarks as the famous Harrods department store. Since opening in 2012, Elegant contemporary architecture
                 and Bvlgari's legendary flair for design are matched by class-leading quality of service. Design, service, and exceptionally generously proportioned rooms and suites combined with unrivalled facilitie such as a full gymnasium and
@@ -360,6 +368,7 @@
               console.log(event);
             }
           </script>
+              <!--Script for the drop down action -->
     </results>
     <container id="maincontainer">
         <div class="calendar">

@@ -1,3 +1,5 @@
+<!--HTML Document for Group 2 page designed by Kharesa-Kesa and Kingsley Charles -->
+<!--November - December 2020 -->
 <!doctype html>
 <html>
 <title>STAY HOTELS | Homepage</title>
@@ -13,6 +15,8 @@
             height: 100vh;
             margin: 0;
         }
+        /* Here we have applied the styling, the grid format is used to layout the page into sections from the prototype design*/
+
         header, footer, homepicture, search_box, div {
             padding: 20px;
         }
@@ -34,6 +38,7 @@
             justify-content: center; 
             align-items: center;
         }
+        /* The search section is styled here, using a container within a container format, the box and the button are both styled */
         .search_for_location {
             position: relative;
             background: #ffffff;
@@ -63,6 +68,7 @@
             grid-template-rows: auto auto auto;
             padding: 1px;
         }
+        /* The images of the various destinations also use grid format to display them uniform*/
         .grid-item1 {
             background-color: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(0, 0, 0, 0.8);
@@ -93,13 +99,16 @@
         }
     </style>
     <body>
+    <!--use html to code the title header where the title and the logo sit-->
     <header id="pageHeader">
         <div class="titleheader">
             <img src="images/logo.png" alt="STAY HOTELS LOGO" width="45px" border="0" style="position:relative; padding: 5px;">
             <h1 style="text-align: center; color: white;">STAY HOTELS</h1>
         </div>
     </header>
+    <!--homepicture is used to describe the main picture that is shown on the homepage in the left section of the grid -->
     <homepicture id="mainhomepicture"></homepicture>
+        <!--Search box refers to the right hand area that is used to enter search criteria for the search, including buttons and forms  -->
     <search_box id="mainsearch_box">
         <h2 style="text-align: center;">Search for your business trip here</h2>
         <form class="Search_for_location" style="text-align:center">
@@ -117,6 +126,7 @@
                 </form>
                 <form action="/action_page.php">
                     <img src="images/calendericon.png" alt="Calendar" width="10px" border="0">
+                        <!--  Calender icon is used for imagery next to the input for dates -->
                     <label for="Date In:">Date In:</label>
                     <input type="date" id="date_in" name="date_in">
                 </form>
@@ -126,6 +136,7 @@
                     <input type="date" id="date_out" name="date_out">
                 </form>
                 <a href="search_results.html" class="search_button">Find Results</a>
+                    <!--Navigation to the search page from here-->
             </div>
             <div class="Company_details" style="text-align: center; padding:0%">
                 <p>
